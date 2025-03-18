@@ -8,8 +8,8 @@ const int b = 5;
 const int c=-1;
 const int d = 2;
 double AB_to_CD(double v){
-  return 0.75*v-1-0.75 ;
-  //return v*(d-c)/(b-a)-c-a*(d-c)/(b-a);
+  return  ((v - a) * (d - c) / (b - a)) + c;
+
 }
 
 int main()
