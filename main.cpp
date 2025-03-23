@@ -4,18 +4,17 @@
 #include <limits>
 #include <numbers> 
 #include <vector>
-
+// command for proper running: g++ -std=c++20 -o main main.cpp
 double AB_to_CD(double);
-double mean_i(const std::vector<double>& arr, int i);
+double mean_i(const std::vector<double>&, int i);
 
-const int a= 1;
+const int a = 1;
 const int b = 5;
 const int c=-1;
 const int d = 2;
 const int _prec = 16;
 const std::string filename = "data.txt";
 const std::string filename_out = "result.txt";
-
 
 int main() {
     std::vector<double> vec;
@@ -41,7 +40,7 @@ double AB_to_CD(double v){
 
 double mean_i(const std::vector<double>& arr, int i){
 	double mean=0.0;
-	for(size_t k = 0; k<i; k++){
+	for(int k = 0; k<i; k++){
 		mean+=arr[k]/i;
 	}
 	return mean;
