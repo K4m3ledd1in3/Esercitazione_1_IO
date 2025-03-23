@@ -4,7 +4,7 @@
 #include <limits>
 #include <numbers> 
 #include <vector>
-// command for proper running: g++ -std=c++20 -o main main.cpp
+//g++ -std=c++20 -o main main.cpp
 double AB_to_CD(double);
 double mean_i(const std::vector<double>&, int i);
 
