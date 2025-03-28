@@ -3,7 +3,6 @@
 #include <iomanip>
 #include <limits>
 #include <numbers> 
-//g++ -std=c++20 -o main main.cpp
 double AB_to_CD(double);
 
 const int a = 1;
