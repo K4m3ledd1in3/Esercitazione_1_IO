@@ -21,12 +21,13 @@ int main() {
     if (ifs.is_open() && myfile.is_open()) {
         double temp = 0.0;
         double sum = 0.0; 
-        int count = 0; 
+        int count = 0;    
+        double mean = 0.0;
         while (ifs >> temp) {
             double buff = AB_to_CD(temp); 
             sum += buff;
             count++;
-            double mean = sum / count;
+            mean = sum / count;
             std::cout << temp << " - " << buff << " - ";
             myfile << mean << "\n";
             std::cout << mean << "\n";
