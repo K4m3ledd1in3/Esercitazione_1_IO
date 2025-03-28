@@ -23,8 +23,9 @@ int main() {
         double sum = 0.0; 
         int count = 0;    
         double mean = 0.0;
+        double buff = 0.0;
         while (ifs >> temp) {
-            double buff = AB_to_CD(temp); 
+            buff = AB_to_CD(temp); 
             sum += buff;
             count++;
             mean = sum / count;
