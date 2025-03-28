@@ -6,7 +6,6 @@
 #include <vector>
 //g++ -std=c++20 -o main main.cpp
 double AB_to_CD(double);
-double mean_i(const std::vector<double>&, int i);
 
 const int a = 1;
 const int b = 5;
