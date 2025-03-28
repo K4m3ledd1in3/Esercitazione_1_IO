@@ -3,7 +3,6 @@
 #include <iomanip>
 #include <limits>
 #include <numbers> 
-#include <vector>
 //g++ -std=c++20 -o main main.cpp
 double AB_to_CD(double);
 
@@ -16,7 +15,6 @@ const std::string filename = "data.txt";
 const std::string filename_out = "result.txt";
 
 int main() {
-    std::vector<double> vec;
     std::ifstream ifs(filename);
     std::cout << std::setprecision(_prec) << std::scientific;
     std::ofstream myfile(filename_out);
