@@ -24,11 +24,16 @@ int main() {
     myfile << std::scientific << std::setprecision(_prec);
     if (ifs.is_open() && myfile.is_open()) {
         double temp = 0.0;
+        double sum = 0.0; 
+        int count = 0; 
         while (ifs >> temp) {
-            vec.push_back(AB_to_CD(temp));
-            std::cout << temp << " - " << vec.back() << " - ";
-            myfile << mean_i(vec, vec.size()) << "\n";
-            std::cout << mean_i(vec, vec.size()) << "\n";
+            double buff = AB_to_CD(temp); 
+            sum += buff;
+            count++;
+            double mean = sum / count;
+            std::cout << temp << " - " << buff << " - ";
+            myfile << mean << "\n";
+            std::cout << mean << "\n";
         }
         myfile.close();
     }
@@ -38,10 +43,4 @@ double AB_to_CD(double v){
   return  ((v - a) * (d - c) / (b - a)) + c;
 }
 
-double mean_i(const std::vector<double>& arr, int i){
-	double mean=0.0;
-	for(int k = 0; k<i; k++){
-		mean+=arr[k]/i;
-	}
-	return mean;
-}
+
